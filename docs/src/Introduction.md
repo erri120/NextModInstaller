@@ -190,7 +190,7 @@ Next, we have a step that is only active if `hasCACO` is set to `On`:
         </dependencies>
     </visible>
     <!-- rest omitted -->
-</insallStep>
+</installStep>
 ```
 
 Inside this step, we can choose and install patches for mods that might be incompatible with "Complete Alchemy and Cooking Overhaul":
@@ -219,7 +219,7 @@ Inside this step, we can choose and install patches for mods that might be incom
 </plugin>
 ```
 
-Here we have a compatability check that uses `fileDependency` again to check if `cckrtsse001_altar.esl` is active.
+Here we have a compatibility check that uses `fileDependency` again to check if `cckrtsse001_altar.esl` is active.
 
 Dependencies are purely file based. Either you have the file installed, or you don't. This file based approach is very basic and falls apart quickly, especially for patches. The issue this represents is that any mod can provide the file. You can't describe the exact mod that is required. Additionally, you also can't specify the version or a range of versions. Maybe your patch only works for versions between `1.0.0` and `2.0.0`?
 
@@ -233,7 +233,7 @@ Ironically, a completely different community has somewhat solved this dependency
 
 This allows anyone to link to all versions, a specific major version, or a specific complete version of a library. However, it should be noted that `libzstd.so` is symlinked to `libzstd.so.1` which is symlinked to `libzstd.so.1.5.5`. You don't have three different files, you have a single file that is available at three different paths.
 
-Aside from a file dependency, it's also not possible to have a requirement on a specific game, game edition or game version. Skyrim has multiple different editions and versions and compatability can be very different across them. FOMOD doesn't offer this capability, which results in mod pages having different files for each game version or a single FOMOD where the user has to select the correct version.
+Aside from a file dependency, it's also not possible to have a requirement on a specific game, game edition or game version. Skyrim has multiple different editions and versions and compatibility can be very different across them. FOMOD doesn't offer this capability, which results in mod pages having different files for each game version or a single FOMOD where the user has to select the correct version.
 
 #### Archives, Paths and Images
 
