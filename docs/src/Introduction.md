@@ -233,6 +233,8 @@ Ironically, a completely different community has somewhat solved this dependency
 
 This allows anyone to link to all versions, a specific major version, or a specific complete version of a library. However, it should be noted that `libzstd.so` is symlinked to `libzstd.so.1` which is symlinked to `libzstd.so.1.5.5`. You don't have three different files, you have a single file that is available at three different paths.
 
+Aside from a file dependency, it's also not possible to have a requirement on a specific game, game edition or game version. Skyrim has multiple different editions and versions and compatability can be very different across them. FOMOD doesn't offer this capability, which results in mod pages having different files for each game version or a single FOMOD where the user has to select the correct version.
+
 #### Archives, Paths and Images
 
 FOMOD (XML) doesn't care what archive is used for packaging. You mostly find ZIP archives but sometimes also 7z archives that contain FOMOD (XML) files. While this isn't inherently an issue, it requires mod managers to support any archive if they want to support this format.
