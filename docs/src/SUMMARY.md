@@ -8,6 +8,6 @@
 - [Archive Format]()
   - [Assets]()
 - [Dependencies]()
-- [Extensibility]()
+- [Extensibility](./design/Extensibility.md)
 
 # Specification
