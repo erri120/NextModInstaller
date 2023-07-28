@@ -4,3 +4,17 @@ language = "en"
 multilingual = false
 src = "src"
 title = "NextModInstaller - Docs"
+
+[build]
+create-missing = false
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output]
+
+[output.html]
+additional-js = ["theme/mermaid.min.js", "theme/mermaid-init.js"]
+
