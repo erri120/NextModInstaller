@@ -58,6 +58,29 @@ The main issue lies in the fact that authors often don't know if their mod is a 
 
 ### Game Requirements
 
+External dependencies can also contain a dependency to a specific version of the game. Let's take Stardew Valley as an example:
+
+Most SDV mods will dependent on a version of SMAPI. However, SMAPI depends on a specific version number of the game. SMAPI [3.18.4](https://github.com/Pathoschild/SMAPI/releases/tag/3.18.4) requires SDV `>=1.5.6`. Furthermore, it has different steps depending on the Operating System.
+
+Bethesda in it's infinite wisdom blessed us with multiple different PC releases and it's a total mess:
+
+1) Skyrim released on 11.11.11.
+2) Skyrim Legendary Edition contains the three major DLCs.
+3) Skyrim Special Edition is, for all intent and purposes, a new game.
+4) Skyrim VR is a standalone VR port and also a different game but based on Skyrim Special Edition.
+5) Skyrim Special Edition _after_ 1.5.97 added four "Creations" to the game.
+6) Skyrim Anniversary Edition is just Skyrim Special Edition with _all_ "Creations" included.
+7) Skyrim Special Edition release on GOG
+8) Skyrim Special Edition release on the Epic Games Store
+9) Skyrim Special Edition release for Game Pass
+
+You can take a look at [SKSE](https://skse.silverlock.org/) to see the game requirements in action. All of the "releases" listed above have mods that only work for those exact releases. Skyrim is great for testing the robustness of the game requirements part of the specification. The following properties have to be identified:
+
+1) The release: Skyrim LE, Skyrim SE, Skyrim VR and Skyrim AE.
+2) The DLCs or other Add-ons.
+3) The version number.
+4) The store front: Steam, GOG, EGS, Xbox.
+
 ## Extensibility
 
 The base specification should be game-agnostic and cover the majority of use cases. Mod Managers that want to support this format must implement the base specification, but they are free to choose what extensions they want to support.
