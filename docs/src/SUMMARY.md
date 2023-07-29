@@ -2,12 +2,6 @@
 
 [Introduction](./Introduction.md)
 
-# Design
-
-- [Core Concept]()
-- [Archive Format]()
-  - [Assets]()
-- [Dependencies]()
-- [Extensibility](./design/Extensibility.md)
+- [Core Concepts](./Core_Concepts.md)
 
 # Specification
