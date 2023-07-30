@@ -81,6 +81,152 @@ You can take a look at [SKSE](https://skse.silverlock.org/) to see the game requ
 3) The version number.
 4) The store front: Steam, GOG, EGS, Xbox.
 
+An external game database would be required to satisfy those conditions. Data for such a database could look like this:
+
+```json
+{
+  "id": "e0902c12-2065-435d-b1bd-e7693a98decd",
+  "name": "The Elder Scrolls V: Skyrim",
+  "stores": {
+    "Steam": [
+      {
+        "name": "The Elder Scrolls V: Skyrim",
+        "appId": 72850
+      }
+    ]
+  },
+  "dlcs": [
+    {
+      "id": "3191eb2a-5cca-4a42-8541-2fb44a114ad2",
+      "name": "The Elder Scrolls V: Skyrim - Dawnguard",
+      "stores": {
+        "Steam": {
+          "name": "The Elder Scrolls V: Skyrim - Dawnguard",
+          "appId": 211720
+        }
+      }
+    },
+    {
+      "id": "b146c808-371d-4acd-998a-ad6f5e3cf956",
+      "name": "The Elder Scrolls V: Skyrim - Hearthfire",
+      "stores": {
+        "Steam": {
+          "name": "The Elder Scrolls V: Skyrim - Hearthfire",
+          "appId": 220760
+        }
+      }
+    },
+    {
+      "id": "62c9d341-9c99-451f-8741-cd464bac16ae",
+      "name": "The Elder Scrolls V: Skyrim - Dragonborn",
+      "stores": {
+        "Steam": {
+          "name": "The Elder Scrolls V: Skyrim - Dragonborn",
+          "appId": 226880
+        }
+      }
+    }
+  ]
+}
+```
+
+```json
+{
+  "id": "395f8893-07fa-4a9b-a4cc-36aaf98b226d",
+  "name": "The Elder Scrolls V: Skyrim Special Edition",
+  "stores": {
+    "Steam": [
+      {
+        "name": "The Elder Scrolls V: Skyrim Special Edition",
+        "appId": 489830
+      }
+    ],
+    "GOG": [
+      {
+        "name": "The Elder Scrolls V: Skyrim Special Edition",
+        "productId": 1711230643
+      }
+    ],
+    "EGS": [
+      {
+        "name": "The Elder Scrolls V: Skyrim Special Edition",
+        "catalogItemId": "???"
+      }
+    ],
+    "Xbox": [
+      {
+        "name": "The Elder Scrolls V: Skyrim Special Edition (PC)",
+        "id": "???"
+      }
+    ]
+  },
+  "dlcs": [
+    {
+      "id": "f5357237-4717-415f-81b9-8e2971677aaa",
+      "name": "The Elder Scrolls V: Skyrim Anniversary Upgrade",
+      "stores": {
+        "Steam": {
+          "name": "The Elder Scrolls V: Skyrim Anniversary Upgrade",
+          "appId": 1746860
+        },
+        "GOG": {
+          "name": "The Elder Scrolls V: Skyrim Anniversary Upgrade",
+          "productId": 1162721350
+        },
+        "Xbox": {
+          "name": "The Elder Scrolls V: Skyrim Anniversary Upgrade (PC)",
+          "id": "???"
+        }
+      }
+    }
+  ],
+  "packages": [
+    {
+      "id": "9a187798-bb14-406b-b00e-708f188fc101",
+      "name": "The Elder Scrolls V: Skyrim Anniversary Edition",
+      "stores": {
+        "Steam": [
+          {
+            "name": "The Elder Scrolls V: Skyrim Anniversary Edition",
+            "id": 626153,
+            "includedDLCs": [
+              "f5357237-4717-415f-81b9-8e2971677aaa"
+            ]
+          }
+        ],
+        "GOG": [
+          {
+            "name": "The Elder Scrolls V: Skyrim Anniversary Edition",
+            "productId": 1801825368,
+            "includedDLCs": [
+              "f5357237-4717-415f-81b9-8e2971677aaa"
+            ]
+          }
+        ],
+        "EGS": [
+          {
+            "name": "The Elder Scrolls V: Skyrim Anniversary Edition",
+            "catalogItemId": "???",
+            "includedDLCs": [
+              "f5357237-4717-415f-81b9-8e2971677aaa"
+            ]
+          }
+        ],
+        "Xbox": [
+          {
+            "name": "The Elder Scrolls V: Skyrim Anniversary Edition (PC)",
+            "id": "???",
+            "includedDLCs": [
+              "f5357237-4717-415f-81b9-8e2971677aaa"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
 ## Extensibility
 
 The base specification should be game-agnostic and cover the majority of use cases. Mod Managers that want to support this format must implement the base specification, but they are free to choose what extensions they want to support.
